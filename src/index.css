@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* index.css */
+html, body, #root {
+  margin: 0;       
+  padding: 0;      
+  height: 100%;    
+  width: 100%;
+  scrollbar-gutter: stable;     
+  /* overflow-y: scroll; */
+  /* overflow: hidden; */
+  /* overflow-x: hidden; */
+  box-sizing: border-box; /* optional, safer layout */
+}
+
