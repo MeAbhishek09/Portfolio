@@ -44,7 +44,7 @@ export default function Activities() {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold text-center mb-12"
         >
-            <span className="text-blue-400 sm:text-2xl md:text-3xl lg:text-4xl ">🎓 My Academics & Activities</span> 
+            <span className="text-blue-400 sm:text-xl md:text-3xl lg:text-4xl ">🎓 My Academics & Activities</span> 
         </motion.h2>
 
         {/* Timeline */}

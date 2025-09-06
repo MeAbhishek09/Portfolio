@@ -38,7 +38,7 @@ function Projects() {
   return (
     <div id="projects" className="  text-white flex flex-col items-center py-10 bg-gray-100 ">
       <motion.h1
-        className=" pb-5 mb-5 font-extrabold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent sm:text-2xl md:text-3xl lg:text-4xl"
+        className=" pb-5 mb-5 font-extrabold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent md:text-3xl lg:text-4xl"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
