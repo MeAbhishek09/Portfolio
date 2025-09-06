@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "../assets/logo.jpg";
+import heroImg from "../assets/Abhishek.jpg";
 import StarsBackground from "../Stars/StarsBackground";
 
 export default function Hero() {

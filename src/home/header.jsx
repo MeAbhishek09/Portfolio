@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.jpg";
+// import logo from "../assets/logo.jpg";
+import logo from "../assets/Abhishek.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
