@@ -25,7 +25,7 @@ export default function AcademicsTimeline() {
 
   return (
     <section className="w-full min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white py-12 px-6 flex flex-col items-center">
-      <h2 className="text-4xl font-bold mb-10 sm:text-2xl md:text-3xl lg:text-4xl">My Academic Journey</h2>
+      <h2 className="text-4xl font-bold mb-10  text-center bg-transparent">My Academic Journey</h2>
 
       <div className="relative w-full max-w-3xl">
         {/* Vertical line in the center */}

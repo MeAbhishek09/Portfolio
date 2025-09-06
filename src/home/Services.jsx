@@ -34,7 +34,7 @@ export default function Services() {
     <div id="services" className=" text-white py-10 bg-gray-100">
       {/* Heading */}
       <h1 className="text-center font-bold mb-12">
-        <span className="text-blue-400 md:text-3xl lg:text-4xl">
+        <span className="text-blue-400 text-3xl md:text-3xl lg:text-4xl">
           My Services
         </span>
       </h1>
