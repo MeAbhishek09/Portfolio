@@ -59,7 +59,7 @@ function ContactPage() {
       </div>
 
        {/* Right Side - Contact Form */}
-      <div className="w-full md:w-1/2 flex items-center justify-center py-10 md:py-0">
+      <div className="w-full md:w-1/2 flex items-center justify-center py-10 md:py-0 px-4">
         <motion.div
           className="max-w-lg w-full  rounded-2xl shadow-2xl p-8 border border-gray-700/40"
           initial={{ opacity: 0, y: 50 }}
