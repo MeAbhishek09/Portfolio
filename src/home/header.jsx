@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react"; // icons
+import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,10 +9,10 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const links = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
     { name: "Services", href: "#services" },
-    { name: "Work", href: "#work" },
     { name: "Contact", href: "#contact" },
   ];
 

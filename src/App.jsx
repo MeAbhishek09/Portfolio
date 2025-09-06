@@ -5,15 +5,15 @@ import Header from './home/header'
 import Contact from './home/ContactPage'
 import MovingText from "./home/MovingText"
 import Hero from "./home/Hero"
-import Work from "./home/Work"
+import Work from "./home/Projects"
 import About from "./home/About"
 import Footer from './home/Footer'
 import Technology from "./home/Technology"
 import Services from "./home/Services"
-import Timeline from "./home/Timeline"
-import Academics from "./home/Academics"
-import StarryPage from "./home/StarryPage"
-
+import Timeline from "./home/Activities"
+import AcademicsTimeline from "./home/AcademicsTimeline"
+import ResearchInternships from "./home/ResearchInternships"
+import Avatar3D from './home/Avatar3D'
 function App() {
   const [loading, setLoading] = useState(true)
 
@@ -24,17 +24,18 @@ function App() {
       {loading ? (
         <LoadingPage />
       ) : (
-        <div className="flex flex-col w-screen ">   {/* removed min-h-screen */}
+        <div className="flex flex-col w-full overflow-x-hidden">   
           <Header />
           <Hero />
-          {/* <StarryPage/> */}
           <About/>
           <MovingText />
-          <Technology/>
-          <Work/>
-          <Academics/>
+          <AcademicsTimeline/>
           <Timeline/>
+          <ResearchInternships/>
+          <Work/>
+          {/* <Avatar3D height={500}/> */}
           <Services/>
+          {/* <Technology/> */}
           <Contact />
           <Footer/>
         </div>

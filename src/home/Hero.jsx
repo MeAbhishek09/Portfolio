@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import heroImg from "../assets/logo.jpg";
+import StarsBackground from "../Stars/StarsBackground";
 
 export default function Hero() {
   return (
-    <section
-      className="relative h-screen w-full overflow-hidden "
+    <section id="hero"
+      className="relative h-screen w-full overflow-x-hidden"
     >
       {/* Full-bleed gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600" />
-
+      <StarsBackground />
       {/* Background blobs (clipped by overflow-hidden) */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
@@ -61,15 +62,17 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-300 transition"
+              className="px-6 py-3 bg-transparent border border-white font-semibold rounded-full hover:bg-yellow-400 hover:text-black transition"
             >
               Contact Me
             </a>
             <a
-              href="#projects"
-              className="px-6 py-3 bg-transparent border border-white font-semibold rounded-full hover:bg-white hover:text-black transition"
+              href="https://drive.google.com/file/d/1tPB1DWs2sDhB57pHF1Rsm8C23OBGFO3Y/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-transparent border border-white font-semibold rounded-full hover:bg-yellow-400 hover:text-black transition"
             >
-              View Projects
+              View Resume
             </a>
           </motion.div>
         </div>

@@ -4,6 +4,7 @@
 // import bottom from "../assets/envelope_out_bottom.png";
 // import top from "../assets/envelope_out_top.png";
 // import letter from "../assets/letter.png";
+import StarsBackground from "../Stars/StarsBackground";
 
 
 import React from "react";
@@ -11,8 +12,8 @@ import { motion } from "framer-motion";
 
 function ContactPage() {
   return (
-    <section className=" bg-gray-900 text-white flex relative h-screen w-full overflow-hidden">
-      
+    <section id="contact"  className=" bg-gray-900 text-white flex relative h-screen w-full overflow-hidden">
+       <StarsBackground />
       {/* Left Side - Custom Mailbox Animation */}
       <div className="w-1/2 flex items-center justify-center relative">
         {/* Mailbox Structure */}
@@ -58,7 +59,9 @@ function ContactPage() {
       </div>
 
       {/* Right Side - Contact Form */}
+      
       <div className="w-1/2 flex items-center justify-center">
+      
         <div className="max-w-lg w-full bg-gray-800 rounded-2xl shadow-lg p-8">
           <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
 

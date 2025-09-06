@@ -1,9 +1,17 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import StarsBackground from "../Stars/StarsBackground";
+
 
 function Footer() {
   return (
-    <footer className="w-full bg-gray-900 text-gray-300 py-8 px-6">
+    
+    <footer className="w-full bg-gray-900  text-gray-300 py-8 px-6 overflow-hidden relative">
+      {/* <div className="absolute inset-0 z-0"> */}
+        <StarsBackground />
+      {/* </div> */}
+       
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        
         
         {/* Logo / Name */}
         <div className="text-white font-bold text-xl">
@@ -20,13 +28,13 @@ function Footer() {
 
         {/* Social Icons */}
         <div className="flex space-x-4 text-xl">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+          <a href="https://github.com/MeAbhishek09" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+          <a href="https://linkedin.com/in/abhishek-aiml" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+          <a href="https://twitter.com/meAbhishek_09" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
             <FaTwitter />
           </a>
         </div>
