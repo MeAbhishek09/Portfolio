@@ -50,8 +50,8 @@ export default function ResearchInternships() {
   const [active, setActive] = useState(1);
 
   return (
-    <section className="w-full px-6 md:px-12 py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
+    <section className="w-full px-6 py-6 bg-gray-100">
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Side */}
         <div className="w-full md:w-1/3">
           <h2 className="text-3xl  font-bold mb-6 text-blue-400">

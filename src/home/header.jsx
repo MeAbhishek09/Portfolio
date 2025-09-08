@@ -32,7 +32,7 @@ const Header = () => {
         scrolled ? "bg-gray-100 shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="px-6 flex items-center justify-between h-12">
+      <div className=" mx-auto px-6 flex items-center justify-between h-12">
         {/* Logo + Name */}
         <div className="flex items-center space-x-3">
           <img

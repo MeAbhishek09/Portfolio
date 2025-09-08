@@ -6,28 +6,29 @@ export default function AcademicsTimeline() {
     {
       year: "2020",
       title: "High School",
-      description: "Completed my 10th with distinction.",
+      description: "Completed 10th grade with distinction from RPVV (Link Road), Karol Bagh, Delhi — excelled in Mathematics and Science; awarded for academic performance and active participation in school science fairs.",
       icon: <FaGraduationCap />,
     },
     {
       year: "2022",
-      title: "Intermediate",
-      description: "Completed 12th with Science stream.",
+      title: "Intermediate (Science)",
+      description: "Completed 12th (Science stream: Physics, Chemistry, Mathematics) from RPVV (Link Road), Karol Bagh, Delhi, with strong marks in PCM and hands-on project experience in basic electronics and programming.",
       icon: <FaChalkboardTeacher />,
     },
     {
       year: "2023 - Present",
       title: "B.Tech CSE",
-      description: "Pursuing Computer Science & Engineering at CUJ.",
+      description: "Pursuing Bachelor of Technology in Computer Science & Engineering at Central University of Jharkhand. Coursework & projects focus on AI, ML, data structures and web development; actively involved in research/technical clubs.",
       icon: <FaLaptopCode />,
     },
+
   ];
 
   return (
     <section className="w-full min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white py-12 px-6 flex flex-col items-center">
       <h2 className="text-4xl font-bold mb-10  text-center bg-transparent">My Academic Journey</h2>
 
-      <div className="relative w-full max-w-3xl">
+      <div className="relative w-full ">
         {/* Vertical line in the center */}
         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gray-700"></div>
 

@@ -5,12 +5,12 @@ import StarsBackground from "../Stars/StarsBackground";
 function Footer() {
   return (
     
-    <footer className="w-full bg-gray-900  text-gray-300 py-8 px-6 overflow-hidden relative">
+    <footer className="w-full bg-gray-900  text-gray-300 px-6 py-6 overflow-hidden relative">
       {/* <div className="absolute inset-0 z-0"> */}
         <StarsBackground />
       {/* </div> */}
        
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-6 ">
         
         
         {/* Logo / Name */}

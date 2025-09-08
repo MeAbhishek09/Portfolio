@@ -6,7 +6,7 @@ import cloud2 from "../assets/cloud2.webp";
 // import cloud4 from "../assets/cloud4.png";
 export default function LoadingPage() {
   return (
-    <div className="absolute top-0 left-0 w-screen h-screen bg-sky-700 overflow-hidden flex items-center justify-center">
+    <div className="absolute  w-screen h-screen bg-sky-700 overflow-hidden flex items-center justify-center">
       {/* Background Clouds */}
   {/* <motion.div
     className="absolute top-10 left-0 flex space-x-[-40px] blur-md" // overlapping circles
@@ -47,28 +47,6 @@ export default function LoadingPage() {
         animate={{ x: ["0%", "-15%", "0%"] }}
         transition={{ duration: 80, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      {/* Cloud 3 */}
-      {/* <motion.img
-        src={cloud4}
-        alt="cloud3"
-        className="absolute bottom-0 left-[50%] w-[60%] opacity-85 blur-sm"
-        animate={{ x: ["0%", "10%", "0%"] }}
-        transition={{ duration: 70, repeat: Infinity, ease: "easeInOut" }}
-      /> */}
-
-
-
-  {/* <motion.div
-    className="absolute top-20 right-0 h-96 w-72 bg-white rounded-full opacity-70 blur-xl"
-    animate={{ x: ["0%", "-40%", "0%"] }}
-    transition={{ duration: 70, repeat: Infinity, ease: "easeInOut" }}
-  />
-  <motion.div
-    className="absolute top-1/2 left-0 h-64 w-90 bg-white rounded-full opacity-75 blur-xl"
-    animate={{ x: ["0%", "30%", "0%"] }}
-    transition={{ duration: 80, repeat: Infinity, ease: "easeInOut" }}
-  /> */}
 
 
 

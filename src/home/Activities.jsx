@@ -35,8 +35,8 @@ export default function Activities() {
   ];
 
   return (
-    <section className="min-h-screen bg-gray-100 text-white px-6 py-6">
-      <div className="max-w-5xl mx-auto">
+    <section className="bg-gray-100 text-white px-6 py-6 ">
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Heading */}
         <motion.h2
           initial={{ y: -30, opacity: 0 }}
@@ -48,7 +48,7 @@ export default function Activities() {
         </motion.h2>
 
         {/* Timeline */}
-        <div className="relative border-l border-gray-700 ml-6">
+        <div className="relative border-l border-gray-700  ">
           {academics.map((item, i) => (
             <motion.div
               key={i}
@@ -56,7 +56,7 @@ export default function Activities() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="mb-12 ml-6 relative"
+              className="mb-10 ml-6 relative"
             >
               {/* Dot */}
               <span className="absolute -left-9 flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full border border-gray-600">
