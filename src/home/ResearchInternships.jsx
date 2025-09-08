@@ -17,8 +17,17 @@ const internships = [
   details:
     "Worked on space weather research with a focus on Coronal Mass Ejections (CMEs) using LASCO C2 solar imagery. Extracted CME features such as Central Position Angle (CPA), angular width, brightness, and radial speed. Applied image preprocessing techniques and developed scripts for CME detection and classification. Collaborated with research scholars to map CME events with geomagnetic storm indices (Dst) for predictive modeling. Gained hands-on experience in combining astrophysics domain knowledge with machine learning approaches for space weather forecasting.",
 },
-  {
+
+{
   id: 3,
+  title: "Paper Presentation - National Seminar (CSI + CUJ)",
+  year: "2024",
+  details:
+    "Presented a research paper on 'A Systematic Review of ML Algorithms in DoS and DDoS Attack Detection' at a national seminar organized by the Central University of Jharkhand in collaboration with CSI. Discussed the application of machine learning techniques for cybersecurity, highlighting their effectiveness in detecting network threats. Engaged with researchers and experts, gaining valuable feedback to strengthen the study for future publications.",
+},
+
+  {
+  id: 4,
   title: "AI/ML Internship - Briztech Infotechs",
   year: "2024",
   details:
@@ -26,12 +35,13 @@ const internships = [
 },
 
 {
-  id: 4,
+  id: 5,
   title: "Frontend Internship - Suvidha Foundation",
   year: "2024",
   details:
     "Designed and developed responsive and interactive websites using React.js and Tailwind CSS, focusing on accessibility and modern UI/UX design principles. Enhanced page load speed by optimizing assets and applying lazy loading techniques. Collaborated with backend teams to integrate APIs and ensure seamless data flow. Deployed production-ready applications on cloud platforms, improving engagement and user satisfaction.",
 },
+
 
 
 ];

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import LoadingPage from './home/LoadingPage'
-import Header from './home/header'
+import Header from './home/Header'
 import Contact from './home/ContactPage'
 import MovingText from "./home/MovingText"
 import Hero from "./home/Hero"

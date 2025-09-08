@@ -20,7 +20,7 @@ function Footer() {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center gap-6">
-          <a href="#home" className="hover:text-white transition">Home</a>
+          <a href="#hero" className="hover:text-white transition">Home</a>
           <a href="#about" className="hover:text-white transition">About</a>
           <a href="#projects" className="hover:text-white transition">Projects</a>
           <a href="#contact" className="hover:text-white transition">Contact</a>
