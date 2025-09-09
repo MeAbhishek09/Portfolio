@@ -19,3 +19,17 @@ html, body, #root {
 /* html{
   scroll-padding-top: 60px
 } */
+
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* lock the root font-size so rem-based sizes are stable */
+  html { font-size: 16px; }          /* standard 16px baseline */
+  body { font-size: 1rem; }          /* 1rem = 16px now */
+  #root { font-size: 1rem; }         /* ensure react root uses it */
+  html, body, #root { -webkit-text-size-adjust: 100%; } /* avoid mobile text zoom */
+}
