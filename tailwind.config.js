@@ -16,6 +16,8 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        linkedin: '#0A66C2',
+        twitter:"#1DA1F2",
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

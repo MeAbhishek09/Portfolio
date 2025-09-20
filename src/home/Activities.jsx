@@ -11,12 +11,12 @@ export default function Activities() {
       desc: "Represented school in a national-level challenge on Space & Astronomy, demonstrating problem-solving, teamwork, and analytical skills.",
     },
     {
-    year: "2023",
-    title: "GIAN Course on Artificial Intelligence & Machine Learning",
-    place: "NIT Rourkela",
-    icon: <GraduationCap className="w-8 h-8 text-green-500" />,
-    desc: "Attended a Global Initiative of Academic Networks (GIAN) course, deepening knowledge in AI and ML concepts, applications, and research methodologies.",
-   },
+      year: "2023",
+      title: "GIAN Course on Artificial Intelligence & Machine Learning",
+      place: "NIT Rourkela",
+      icon: <GraduationCap className="w-8 h-8 text-green-500" />,
+      desc: "Attended a Global Initiative of Academic Networks (GIAN) course, deepening knowledge in AI and ML concepts, applications, and research methodologies.",
+    },
     {
       year: "2021",
       title: "NPTEL Java Programming Elite Certificate",
@@ -31,24 +31,23 @@ export default function Activities() {
       icon: <Users className="w-8 h-8 text-red-500" />,
       desc: "Learned discipline, leadership, and teamwork through NCC training.",
     },
-    
   ];
 
   return (
-    <section className="bg-gray-100 text-white px-6 py-6 ">
+    <section className="bg-gray-100 text-white px-6 sm:px-8 lg:px-12 py-6">
       <div className="px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Heading */}
         <motion.h2
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
         >
-            <span className="text-blue-400  text-4xl ">🎓 My Academics & Activities</span> 
+          <span className="text-blue-400">🎓 My Academics & Activities</span>
         </motion.h2>
 
         {/* Timeline */}
-        <div className="relative border-l border-gray-700  ">
+        <div className="relative border-l border-gray-700">
           {academics.map((item, i) => (
             <motion.div
               key={i}
@@ -65,10 +64,10 @@ export default function Activities() {
 
               {/* Card */}
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/40 transition">
-                <span className="text-sm text-gray-600">{item.year}</span>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{item.title}</h3>
-                <p className=" text-gray-600 font-medium">{item.place}</p>
-                <p className="mt-2 text-gray-300">{item.desc}</p>
+                <span className="text-xs sm:text-sm md:text-base text-gray-200">{item.year}</span>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mt-1">{item.title}</h3>
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 font-medium">{item.place}</p>
+                <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-200">{item.desc}</p>
               </div>
             </motion.div>
           ))}
