@@ -23,6 +23,34 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+   // Intersection Observer to update active link
+  useEffect(() => {
+    const sections = links.map(link => document.querySelector(link.href));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            setActive(id);
+          }
+        });
+      },
+      { threshold: 0.6 } // 60% of section must be visible
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, [links]);
+
+
   return (
     <header
       className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300  ${
