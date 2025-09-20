@@ -61,7 +61,7 @@ function ContactPage() {
         {/* Right Side - Contact Form */}
         <div className="w-full md:w-1/2 flex items-center justify-center px-0 sm:px-6 lg:px-12">
           <motion.div
-            className="w-full bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-gray-700/40"
+            className="w-full   rounded-2xl shadow-2xl p-8 border border-gray-700/40"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
