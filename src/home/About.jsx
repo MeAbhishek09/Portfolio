@@ -41,7 +41,7 @@ function About() {
 
             <div className="mt-6 flex flex-wrap gap-4">
               <a
-                href="#work"
+                href="#projects"
                 className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 transition"
               >
                 View Projects
