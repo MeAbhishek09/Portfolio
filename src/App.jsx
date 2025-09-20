@@ -24,7 +24,7 @@ function App() {
       {loading ? (
         <LoadingPage />
       ) : (
-        <div className="flex flex-col w-full overflow-x-hidden">   
+        <div className="">   
           <Header />
           <Hero />
           <About/>
