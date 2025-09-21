@@ -27,7 +27,7 @@ export default function AcademicsTimeline() {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white py-12 px-6 sm:px-8 lg:px-12 flex flex-col items-center">
+    <section className="w-full  bg-gradient-to-r from-blue-500 to-purple-600 text-white py-12 px-6 sm:px-8 lg:px-12 flex flex-col items-center">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center">
         My Academic Journey
       </h2>

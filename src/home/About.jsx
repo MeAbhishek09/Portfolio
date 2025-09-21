@@ -5,10 +5,10 @@ function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen w-full bg-gray-100 px-6 sm:px-8 lg:px-12 py-6 overflow-x-hidden flex items-center justify-center"
+      className="relative h-auto lg:min-h-screen w-full bg-gray-100 px-6 sm:px-8 lg:px-12 py-6 overflow-x-hidden flex items-center justify-center"
     >
-      <div className="px-4 sm:px-6 lg:px-8 mx-auto flex items-center justify-center">
-        <div className="w-[85%] w-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-10 flex flex-col md:flex-row items-center md:items-start overflow-hidden">
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto flex items-center justify-center ">
+        <div className="w-[85%] w-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-10 flex flex-col md:flex-row items-center md:items-start overflow-hidden gap-2 lg:gap-8">
           {/* Image Section */}
           <motion.img
             src={logo_hi}
