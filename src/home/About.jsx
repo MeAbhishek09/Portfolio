@@ -31,7 +31,7 @@ function About() {
             </p>
 
             <p className="text-lg md:text-xl text-white mb-4 leading-relaxed">
-              I am always eager to learn new technologies and collaborate on innovative projects. I have worked on a variety of applications, from building interactive websites to developing AI models that analyze data and provide insights. My goal is to create solutions that are both and impactful.
+              I am always eager to learn new technologies and collaborate on innovative projects. I have worked on a variety of applications, from building interactive websites to developing AI models that analyze data and provide insights. My goal is to create solutions that are both practical and impactful.
             </p>
 
             <p className="text-lg md:text-xl text-white leading-relaxed">
