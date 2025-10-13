@@ -4,28 +4,38 @@ import { GraduationCap, BookOpen, Trophy, Users } from "lucide-react";
 export default function Activities() {
   const academics = [
     {
-      year: "2019",
-      title: "National Student’s Space Challenge",
-      place: "IIT Kharagpur",
-      icon: <Trophy className="w-8 h-8 text-yellow-500" />,
-      desc: "Represented school in a national-level challenge on Space & Astronomy, demonstrating problem-solving, teamwork, and analytical skills.",
-    },
+    year: "2025",
+    title: "Winner - Special Category",
+    place: "National Hackathon 2025",
+    icon: <Trophy className="w-8 h-8 text-yellow-500" />,
+    desc: "Developed an AI-driven solution to turn Facebook leads into booked clinic appointments in one screen, with automated Weekly Growth Brief generation (HTML/PDF) showing KPIs, uplift vs baseline, and recommended actions. Awarded ₹5,000 prize money and ₹10,000 academic support from Izzki Tech Solutions.",
+    }
+    ,
+
     {
-      year: "2023",
+      
+      year: "2025",
       title: "GIAN Course on Artificial Intelligence & Machine Learning",
       place: "NIT Rourkela",
       icon: <GraduationCap className="w-8 h-8 text-green-500" />,
       desc: "Attended a Global Initiative of Academic Networks (GIAN) course, deepening knowledge in AI and ML concepts, applications, and research methodologies.",
     },
     {
-      year: "2021",
+      year: "2024",
+      title: "National Student’s Space Challenge",
+      place: "IIT Kharagpur",
+      icon: <Trophy className="w-8 h-8 text-yellow-500" />,
+      desc: "Represented school in a national-level challenge on Space & Astronomy, demonstrating problem-solving, teamwork, and analytical skills.",
+    },
+    {
+      year: "2024",
       title: "NPTEL Java Programming Elite Certificate",
       place: "NPTEL (IITs)",
       icon: <BookOpen className="w-8 h-8 text-green-500" />,
       desc: "Excelled in Java programming with advanced concepts and problem-solving.",
     },
     {
-      year: "2020",
+      year: "2018",
       title: "NCC ‘A’ Certificate",
       place: "National Cadet Corps",
       icon: <Users className="w-8 h-8 text-red-500" />,

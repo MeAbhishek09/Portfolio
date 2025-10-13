@@ -36,7 +36,7 @@ export default function AcademicsTimeline() {
         {/* Vertical line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gray-700"></div>
 
-        <div className="space-y-16">
+        <div className="space-y-6">
           {activities.map((item, index) => (
             <motion.div
               key={index}

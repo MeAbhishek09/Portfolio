@@ -1,71 +1,96 @@
 import { motion } from "framer-motion";
-import { Code, Cpu, Globe, Shield } from "lucide-react";
+import { Code, Cpu, Globe, Shield, Database } from "lucide-react";
 
 const services = [
   {
     title: "Web Development",
     description:
-      "Building responsive, fast, and modern websites tailored to your needs.",
+      "Building responsive, modern websites with clean UI and fast performance.",
     icon: <Globe size={40} />,
+    color: "from-sky-400 to-blue-600",
   },
   {
     title: "AI & Machine Learning",
     description:
-      "Developing intelligent systems with predictive models and deep learning.",
+      "Designing predictive models and neural networks with real-world impact.",
     icon: <Cpu size={40} />,
+    color: "from-purple-500 to-indigo-600",
   },
   {
     title: "Software Development",
     description:
-      "Custom software solutions with clean, maintainable, and scalable code.",
+      "Creating scalable and maintainable software with modern architecture.",
     icon: <Code size={40} />,
+    color: "from-green-400 to-emerald-600",
   },
   {
     title: "Cybersecurity",
     description:
-      "Protecting your systems with strong security measures and risk analysis.",
+      "Ensuring data privacy and protection through secure system design.",
     icon: <Shield size={40} />,
+    color: "from-red-400 to-pink-600",
   },
+  {
+    title: "Database Management",
+    description: "Designing efficient databases for high performance and reliability.",
+    icon: <Database size={40} className="text-orange-500" />,
+    color: "from-orange-400 to-orange-600",
+  },
+  
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="text-white items-center px-6 sm:px-8 lg:px-12 py-6 bg-gray-100">
-      <div className="px-4 sm:px-6 lg:px-8 items-center mx-auto">
-        {/* Heading */}
-        <h1 className="text-center font-bold mb-12">
-          <span className="text-blue-400 text-3xl sm:text-4xl md:text-5xl">
-            My Services
-          </span>
-        </h1>
+    <section
+      id="services"
+      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 bg-gray-900 text-white"
+    >
+      {/* Subtle glowing background */}
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,80,255,0.1),transparent_70%)] blur-3xl"></div> */}
+    <div className="px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+      <div className="relative z-10 text-center mb-12">
+       <motion.h1
+          className="mb-12 mt-4 py-2 font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl p-4"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+           My Services
+        </motion.h1>
+        {/* <p className="mt-4 text-slate-300 text-lg">
+          Transforming ideas into intelligent digital experiences 💡
+        </p> */}
+      </div>
 
-        {/* Grid of cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05, rotate: 1 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 cursor-pointer flex flex-col items-center text-center"
-            >
-              {/* Icon */}
-              <div className="mb-4">{service.icon}</div>
+      {/* Glassmorphic Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10  mx-auto">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05, y: -10 }}
+            whileTap={{ scale: 0.98 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.15 }}
+            viewport={{ once: true }}
+            className={`relative bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]`}
+          >
+            <div
+              className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.color} opacity-30 blur-2xl`}
+            ></div>
 
-              {/* Title */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
-                {service.title}
-              </h2>
-
-              {/* Description */}
-              <p className=" text-gray-300 leading-relaxed text-base sm:text-lg md:text-xl">
+            <div className="relative z-10 flex flex-col items-center text-center space-y-4">
+              <div className="p-3 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+                {service.icon}
+              </div>
+              <h2 className="text-2xl font-semibold">{service.title}</h2>
+              <p className="text-slate-300 text-base leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
       </div>
     </section>
   );
