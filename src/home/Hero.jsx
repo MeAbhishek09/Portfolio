@@ -42,16 +42,22 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Hi, I’m <span className="text-yellow-300">Abhishek</span>
+            Hi, I’m{" "}
+            <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
+              Abhishek
+            </span>
           </motion.h1>
 
           <motion.p
-            className="mt-4 text-lg sm:text-2xl max-w-xl mx-auto text-sky-100"
+            className="text-sky-200 text-lg sm:text-2xl max-w-2xl mx-auto leading-relaxed p-2"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
           >
-            A passionate Developer & AI Enthusiast crafting solutions with code and creativity.
+            Crafting intelligent systems and beautiful web experiences with{" "}
+            <span className="text-yellow-300 font-semibold">AI</span>,{" "}
+            <span className="text-orange-300 font-semibold">Deep Learning</span>, and{" "}
+            <span className="text-pink-300 font-semibold">Web Development</span>.
           </motion.p>
 
           <motion.div

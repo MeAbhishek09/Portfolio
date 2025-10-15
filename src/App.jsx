@@ -9,7 +9,7 @@ import Work from "./home/Projects"
 import About from "./home/About"
 import Footer from './home/Footer'
 import Technology from "./home/Technology"
-import Services from "./home/Services"
+import Specilaties from "./home/Specilaties"
 import Timeline from "./home/Activities"
 import AcademicsTimeline from "./home/AcademicsTimeline"
 import ResearchInternships from "./home/ResearchInternships"
@@ -35,8 +35,8 @@ function App() {
           <ResearchInternships/>
           <Work/>
           {/* <Avatar3D height={500}/> */}
+          <Specilaties/>
           <SkillsSection/>
-          <Services/>
           {/* <Technology/> */}
           <Contact />
           <Footer/>

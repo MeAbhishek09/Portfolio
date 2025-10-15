@@ -8,17 +8,17 @@ function About() {
       className="relative h-auto lg:min-h-screen w-full bg-gray-100 px-6 sm:px-8 lg:px-12 py-6 overflow-x-hidden flex items-center justify-center"
     >
       <div className="px-4 sm:px-6 lg:px-8 mx-auto flex items-center justify-center ">
-        <div className="w-[85%] w-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-10 flex flex-col md:flex-row items-center md:items-start overflow-hidden gap-2 lg:gap-8">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-20 flex flex-col md:flex-row items-center md:items-start overflow-hidden gap-2 lg:gap-12 sm:gap-8">
           {/* Image Section */}
           <motion.img
             src={logo_hi}
             alt="Profile"
-            className="w-40 h-40 md:w-64 md:h-64 flex-shrink-0"
+            className="w-40 h-40 md:w-1/4 md:h-1/4 flex-shrink-0"
           />
 
           {/* Text Section */}
           <motion.div
-            className="flex-1 min-w-0"
+            className="flex-1 min-w-0 w-3/4 "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -34,9 +34,9 @@ function About() {
               I am always eager to learn new technologies and collaborate on innovative projects. I have worked on a variety of applications, from building interactive websites to developing AI models that analyze data and provide insights. My goal is to create solutions that are both practical and impactful.
             </p>
 
-            <p className="text-lg md:text-xl text-white leading-relaxed">
+            {/* <p className="text-lg md:text-xl text-white leading-relaxed">
               Outside of coding, I enjoy exploring new ideas, reading about advancements in AI, and experimenting with personal projects. I thrive in environments that challenge me to think critically and creatively, and I’m always looking for opportunities to learn, contribute, and grow as a developer and researcher.
-            </p>
+            </p> */}
 
 
             <div className="mt-6 flex flex-wrap gap-4">

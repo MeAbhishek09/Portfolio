@@ -8,14 +8,14 @@ function ContactPage() {
   return (
     <section
       id="contact"
-      className="relative w-full bg-gray-900 text-white overflow-hidden px-4 sm:px-6 lg:px-12 py-12 md:py-20"
+      className="relative w-full bg-gray-900 text-white overflow-hidden px-4 sm:px-6 lg:px-12 py-12"
     >
       {/* Background */}
       <StarsBackground />
 
-      <div className="mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-12">
+      <div className="mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-20 x-4 sm:px-6 lg:px-8 ">
         {/* Left Side - Mailbox Animation */}
-        <div className="w-full md:w-1/2 flex items-center justify-center relative px-0 sm:px-6 lg:px-12">
+        <div className="w-full md:w-1/2 flex items-center justify-center relative">
          <img src={Email_icon_animation} alt="Email_icon_animation" className="w-40 h-40 lg:w-65 lg:h-65" />
 
 
@@ -59,7 +59,7 @@ function ContactPage() {
         </div>
 
         {/* Right Side - Contact Form */}
-        <div className="w-full md:w-1/2 flex items-center justify-center px-0 sm:px-6 lg:px-12">
+        <div className="w-full md:w-1/2 flex items-center justify-center">
           <motion.div
             className="w-full   rounded-2xl shadow-2xl p-8 border border-gray-700/40"
             initial={{ opacity: 0, y: 50 }}

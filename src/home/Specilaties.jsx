@@ -39,31 +39,31 @@ const services = [
   
 ];
 
-export default function Services() {
+export default function Specilaties() {
   return (
     <section
-      id="services"
-      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 bg-gray-900 text-white"
+      id="Specilaties"
+      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 bg-gray-100 text-white "
     >
       {/* Subtle glowing background */}
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,80,255,0.1),transparent_70%)] blur-3xl"></div> */}
-    <div className="px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-      <div className="relative z-10 text-center mb-12">
+    <div className="px-4 sm:px-6 lg:px-8 flex flex-col justify-center pb-8">
+      <div className="relative z-10 text-center mb-6 sm:mb-8 lg:mb-12">
        <motion.h1
-          className="mb-12 mt-4 py-2 font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl p-4"
+          className=" mt-4 py-2 font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl p-4"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-           My Services
+           My Specilaties
         </motion.h1>
-        {/* <p className="mt-4 text-slate-300 text-lg">
-          Transforming ideas into intelligent digital experiences 💡
-        </p> */}
+         <p className="mt-4 text-gray-600 text-lg">
+          Transforming ideas into intelligent digital experiences 
+        </p>
       </div>
 
       {/* Glassmorphic Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10  mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10  mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -76,7 +76,7 @@ export default function Services() {
             className={`relative bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]`}
           >
             <div
-              className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.color} opacity-30 blur-2xl`}
+              className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.color} opacity-80 blur-[2px]`}
             ></div>
 
             <div className="relative z-10 flex flex-col items-center text-center space-y-4">

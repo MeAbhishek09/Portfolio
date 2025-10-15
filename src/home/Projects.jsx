@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Cpu, Code, Globe, FileText, Github, ExternalLink,X } from "lucide-react";
+import { Cpu, Code, Globe, FileText, Github, ExternalLink, X, Shield, TrendingUp } from "lucide-react";
 
 const projects = [
  
@@ -44,9 +44,33 @@ const projects = [
     gradient: "from-pink-400 to-pink-600",
     cardColor: "bg-gradient-to-r from-blue-400 to-blue-600",
   },
+  {
+  title: "DoS/DDoS Attack Detection System",
+  description:
+    "Machine learning-based system for detecting DoS/DDoS. Implemented Decision Tree, Logistic Regression, and Random Forest for anomaly detection and real-time threat prediction.",
+  icon: <Shield size={36} className="text-yellow-500" />,
+  tech: ["Python", "Scikit-learn", "Pandas", "Cybersecurity"],
+  github: "https://github.com/MeAbhishek09/ddos-detection-system",
+  demo: "#",
+  gradient: "from-yellow-400 to-orange-600",
+  cardColor: "bg-gradient-to-r from-red-400 to-red-600",
+},
+{
+  title: "Salary Prediction Model",
+  description:
+    "Developed a machine learning model using Linear Regression to predict salaries based on experience, education, and job role. Implemented feature engineering and hyperparameter optimization to enhance predictive accuracy.",
+  icon: <TrendingUp size={36} className="text-blue-500" />,
+  tech: ["Python", "Pandas", "Scikit-learn", "Linear Regression"],
+  github: "https://github.com/MeAbhishek09/salary-prediction-model",
+  demo: "#",
+  gradient: "from-blue-400 to-emerald-600",
+  cardColor: "bg-gradient-to-r from-green-400 to-emerald-600",
+},
+
+
    {
   title: "Tic-Tac-Toe Game",
-  description: "A classic 3x3 Tic-Tac-Toe game implemented in React with interactive UI and win detection.",
+  description: "A classic 3x3 Tic-Tac-Toe game built using HTML, CSS, and JavaScript with an interactive interface and automatic win detection.",
   icon: <X size={36} className="text-red-500" />, // Use <Circle /> for O if you prefer
   tech: ["React", "JavaScript", "CSS"],
   github: "https://github.com/MeAbhishek09/tic-tac-toe.github.io",   // GitHub repo link
@@ -60,24 +84,24 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className=" px-6 sm:px-8 lg:px-12 bg-gray-100 text-gray-100">
-      <div className="px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto pb-8">
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
         <motion.h1
-            className="mb-12 py-2 font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl p-4"
+            className=" py-2 font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl p-4"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             My Projects
           </motion.h1>
-          {/* <p className="text-gray-600 text-lg">
-            Selected projects showcasing AI, ML, and full-stack skills
-          </p> */}
+          <p className="text-gray-600 text-lg mt-4">
+           Projects that reflect my expetise and passion
+          </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mx-auto opacity-90">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
@@ -85,11 +109,12 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className={`${project.cardColor} bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between`}
+              className={`${project.cardColor} bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between `}
             >
+              
               {/* Gradient Top Border */}
               <div
-                className={`h-1 w-full rounded-t-xl mb-4 bg-gradient-to-r ${project.gradient}`}
+                className={`h-1 w-full rounded-t-xl mb-4 bg-gradient-to-r ${project.gradient} `}
               ></div>
 
               {/* Icon */}
