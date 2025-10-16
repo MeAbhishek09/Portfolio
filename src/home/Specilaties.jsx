@@ -33,7 +33,7 @@ const services = [
   {
     title: "Database Management",
     description: "Designing efficient databases for high performance and reliability.",
-    icon: <Database size={40} className="text-orange-500" />,
+    icon: <Database size={40}  />,
     color: "from-orange-400 to-orange-600",
   },
   
@@ -43,10 +43,10 @@ export default function Specilaties() {
   return (
     <section
       id="Specilaties"
-      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 bg-gray-100 text-white "
+      className="relative overflow-hidden px-0 sm:px-8 lg:px-12 bg-gray-100 text-white "
     >
       {/* Subtle glowing background */}
-      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,80,255,0.1),transparent_70%)] blur-3xl"></div> */}
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37, 62, 117, 0.1),transparent_70%)] blur-3xl"></div> */}
     <div className="px-4 sm:px-6 lg:px-8 flex flex-col justify-center pb-8">
       <div className="relative z-10 text-center mb-6 sm:mb-8 lg:mb-12">
        <motion.h1

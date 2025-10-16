@@ -5,7 +5,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative h-auto lg:min-h-screen w-full bg-gray-100 px-6 sm:px-8 lg:px-12 py-6 overflow-x-hidden flex items-center justify-center"
+      className="relative h-auto lg:min-h-screen w-full bg-gray-100 px-0 sm:px-8 lg:px-12 py-6 overflow-x-hidden flex items-center justify-center"
     >
       <div className="px-4 sm:px-6 lg:px-8 mx-auto flex items-center justify-center ">
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-20 flex flex-col md:flex-row items-center md:items-start overflow-hidden gap-2 lg:gap-12 sm:gap-8">
@@ -18,7 +18,7 @@ function About() {
 
           {/* Text Section */}
           <motion.div
-            className="flex-1 min-w-0 w-3/4 "
+            className="flex-1 min-w-0 md:w-3/4 "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}

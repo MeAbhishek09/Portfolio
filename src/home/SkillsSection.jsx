@@ -54,7 +54,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="text-white items-center px-6 sm:px-8 lg:px-12 py-4 bg-gray-100"
+      className="text-white items-center px-0 sm:px-8 lg:px-12 py-4 bg-gray-100"
     >
       <div className="px-4 sm:px-6 lg:px-8 flex flex-col items-center mx-auto pb-4 sm:pb-6">
         <motion.h1

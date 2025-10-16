@@ -83,7 +83,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className=" px-6 sm:px-8 lg:px-12 bg-gray-100 text-gray-100">
+    <section id="projects" className=" px-0 sm:px-6 lg:px-12 bg-gray-100 text-gray-100">
       <div className="px-4 sm:px-6 lg:px-8 mx-auto pb-8">
         {/* Section Title */}
         <div className="text-center mb-6 sm:mb-8 lg:mb-12">

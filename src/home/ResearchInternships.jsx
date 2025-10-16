@@ -43,7 +43,7 @@ export default function ResearchInternships() {
   const [active, setActive] = useState(1);
 
   return (
-    <section className="w-full px-6 sm:px-8 lg:px-12 py-12 bg-gray-100">
+    <section className="w-full px-0 sm:px-8 lg:px-12 py-12 bg-gray-100">
       <div className="px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Side */}
         <div className="w-full md:w-1/3">

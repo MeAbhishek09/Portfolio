@@ -44,7 +44,7 @@ export default function Activities() {
   ];
 
   return (
-    <section className="bg-gray-100 text-white px-6 sm:px-8 lg:px-12 py-6">
+    <section className="bg-gray-100 text-white px-0 sm:px-8 lg:px-12 py-6">
       <div className="px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Heading */}
         <motion.h2
