@@ -22,9 +22,11 @@ function App() {
 
   return (
     <>
-      {loading ? (
-        <LoadingPage />
-      ) : (
+      {
+      // loading ? (
+      //   <LoadingPage />
+      // ) : 
+      (
         <div className="">   
           <Header />
           <Hero />
