@@ -15,6 +15,7 @@ import AcademicsTimeline from "./home/AcademicsTimeline"
 import ResearchInternships from "./home/ResearchInternships"
 import Avatar3D from './home/Avatar3D'
 import SkillsSection from './home/SkillsSection'
+import CertificatesAndSeminarsSection from './home/CertificatesAndSeminarsSection'
 function App() {
   const [loading, setLoading] = useState(true)
 
@@ -38,6 +39,7 @@ function App() {
           <Work/>
           {/* <Avatar3D height={500}/> */}
           <Specilaties/>
+          <CertificatesAndSeminarsSection/>
           <SkillsSection/>
           {/* <Technology/> */}
           <Contact />
