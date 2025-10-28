@@ -6,51 +6,77 @@ const internships = [
     id: 1,
     title: "Research Project - Geomagnetic Storm Prediction",
     year: "2025",
-    details:
-      "Conducted research on predicting geomagnetic storm occurrence and duration using LASCO C2 solar images. Built deep learning pipelines with Convolutional Neural Networks (CNNs) for image-based prediction. Implemented probabilistic labeling methodology with Dst indices for accurate classification of storm-causing CMEs. Experimented with feature extraction (CPA, angular width, brightness, radial speed) and achieved promising results aligning with space weather forecasting research.",
-  },
+    details: [
+  "Conducted research on predicting geomagnetic storm occurrence and duration using LASCO C2 coronagraph images from the SOHO mission. Built an image preprocessing pipeline for cleaning, normalization, and alignment, followed by deep learning model development using Convolutional Neural Networks (CNNs) for detecting and classifying Coronal Mass Ejections (CMEs). Implemented a probabilistic labeling approach based on Dst indices to improve classification accuracy and interpretability.",
+  
+  "Extracted CME features such as Central Position Angle (CPA), angular width, brightness, and radial speed to study their relationship with geomagnetic storm intensity. Achieved results consistent with current space weather forecasting research, showcasing the potential of machine learning methods for early prediction of solar-induced geomagnetic disturbances.",
+],
+
+
+    },
   {
     id: 2,
     title: "Internship - Banaras Hindu University (BHU)",
     year: "2025",
-    details:
-      "Worked on space weather research with a focus on Coronal Mass Ejections (CMEs) using LASCO C2 solar imagery. Extracted CME features such as Central Position Angle (CPA), angular width, brightness, and radial speed. Applied image preprocessing techniques and developed scripts for CME detection and classification. Collaborated with research scholars to map CME events with geomagnetic storm indices (Dst) for predictive modeling. Gained hands-on experience in combining astrophysics domain knowledge with machine learning approaches for space weather forecasting.",
-  },
+     details: [
+      "Worked on predicting geomagnetic storms using LASCO C2 solar imagery from the SOHO mission.",
+      "Developed preprocessing and CNN-based models to detect and classify Coronal Mass Ejections (CMEs).",
+      "Extracted CME features like CPA, angular width, brightness, and radial speed for storm correlation.",
+      "Applied probabilistic labeling based on Dst indices for interpretable storm prediction.",
+      "Combined astrophysics insights with machine learning for improved space weather forecasting.",
+    ],
+
+    },
   {
     id: 3,
     title: "Paper Presentation - National Seminar (CSI + CUJ)",
     year: "2024",
-    details:
-      "Presented a research paper on 'A Systematic Review of ML Algorithms in DoS and DDoS Attack Detection' at a national seminar organized by the Central University of Jharkhand in collaboration with CSI. Discussed the application of machine learning techniques for cybersecurity, highlighting their effectiveness in detecting network threats. Engaged with researchers and experts, gaining valuable feedback to strengthen the study for future publications.",
-  },
+    details: [
+    "Presented a research paper titled 'A Systematic Review of ML Algorithms in DoS and DDoS Attack Detection' at a National Seminar organized by the Central University of Jharkhand in collaboration with the Computer Society of India (CSI).",
+    "The paper explored various machine learning algorithms and their effectiveness in identifying and mitigating Denial-of-Service (DoS) and Distributed Denial-of-Service (DDoS) attacks across network infrastructures.",
+    "Discussed comparative performance metrics, real-time detection capabilities, and implementation challenges in cybersecurity applications of AI-based methods.",
+    "Interacted with researchers, faculty, and industry experts to exchange insights and received constructive feedback to refine the study for future publication and practical deployment in security frameworks.",
+    ],
+
+    },
   {
     id: 4,
     title: "AI/ML Internship - Briztech Infotechs",
     year: "2024",
-    details:
-      "Worked on developing and optimizing machine learning models for spam detection with seamless web integration. Applied supervised learning algorithms such as Logistic Regression, Random Forest, and SVM. Designed and implemented feature engineering techniques to improve classification accuracy by 15%. Deployed the solution into a web-based interface, enabling real-time spam detection and enhancing system reliability.",
-  },
-  {
-    id: 5,
-    title: "Frontend Internship - Suvidha Foundation",
-    year: "2024",
-    details:
-      "Designed and developed responsive and interactive websites using React.js and Tailwind CSS, focusing on accessibility and modern UI/UX design principles. Enhanced page load speed by optimizing assets and applying lazy loading techniques. Collaborated with backend teams to integrate APIs and ensure seamless data flow. Deployed production-ready applications on cloud platforms, improving engagement and user satisfaction.",
-  },
+    details: [
+    "Developed and trained deep learning models for potato leaf disease classification using Convolutional Neural Networks (CNNs). Collected and preprocessed agricultural image datasets to enhance model accuracy through data augmentation, normalization, and noise reduction. Focused on identifying major potato leaf diseases such as early blight and late blight with high precision.",
+    
+    "Implemented and optimized the model using TensorFlow and Keras for efficient GPU execution. Deployed the trained model into an interactive web application using Flask, HTML, CSS, and JavaScript, enabling farmers and researchers to upload leaf images and receive instant disease diagnosis for early intervention.",
+    ],
+
+
+    },
+    {
+      id: 5,
+      title: "Frontend Internship - Suvidha Foundation",
+      year: "2024",
+      details: [
+        "Designed and developed responsive and interactive web pages using HTML, CSS, and JavaScript, with a focus on clean layouts and modern UI/UX practices for better user engagement.",
+        "Improved website performance by optimizing images, minimizing CSS and JavaScript files, and implementing lazy loading for faster page rendering.",
+        "Collaborated with backend teams to integrate RESTful APIs, ensuring smooth data communication between the client and server.",
+        "Deployed fully functional websites on cloud platforms, enhancing accessibility, usability, and overall user satisfaction.",
+      ],
+
+    },
 ];
 
 export default function ResearchInternships() {
   const [active, setActive] = useState(1);
 
   return (
-    <section className="w-full px-0 sm:px-8 lg:px-12 py-12 bg-gray-100">
+    <section id="Research" className="w-full px-0 sm:px-8 lg:px-12 py-12 bg-gray-100">
       <div className="px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Side */}
-        <div className="w-full md:w-1/3">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-blue-400">
+        <div className="w-full md:w-1/3 ">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-blue-400 ">
             Research & Internships
           </h2>
-          <ul className="space-y-3">
+          <ul className="space-y-3 ">
             {internships.map((item) => (
               <li
                 key={item.id}
@@ -58,7 +84,7 @@ export default function ResearchInternships() {
                 className={`cursor-pointer px-4 py-3 rounded-lg font-medium transition duration-300 ${
                   active === item.id
                     ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
-                    : "text-gray-700 hover:bg-gray-200 hover:shadow-md"
+                    : "text-gray-700 hover:bg-gray-200 hover:shadow-md shadow-sm "
                 } text-base sm:text-lg md:text-xl`}
               >
                 {item.title}
@@ -82,13 +108,17 @@ export default function ResearchInternships() {
                 {internships.find((i) => i.id === active)?.title}
               </h3>
 
-              <span className="text-sm sm:text-base text-gray-400 mb-4 block">
+              <span className="text-sm sm:text-base text-gray-400 mb-2 block">
                 {internships.find((i) => i.id === active)?.year}
               </span>
 
-              <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
-                {internships.find((i) => i.id === active)?.details}
-              </p>
+              <div className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed space-y-1">
+                {internships
+                  .find((i) => i.id === active)
+                  ?.details.map((para, index) => (
+                    <p key={index}>{para}</p>
+                  ))}
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>

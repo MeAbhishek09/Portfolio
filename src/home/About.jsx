@@ -27,12 +27,18 @@ function About() {
               About Me
             </h2>
             <p className="text-lg md:text-xl text-white mb-4 leading-relaxed">
-              Hi, I’m <span className="font-semibold text-yellow-300">Abhishek</span>, a passionate Developer and AI enthusiast. I love crafting creative and efficient solutions using code. My experience spans web development, deep learning, and AI projects. I enjoy turning complex problems into simple, elegant solutions and constantly improving my skills to stay at the forefront of technology.
+              Hi, I’m <span className="font-semibold text-yellow-300">Abhishek</span> — a <span className="text-yellow-300">Frontend</span> and <span className="text-yellow-300">AI/ML Developer</span> from Delhi, India. I’m passionate about crafting intuitive user interfaces, building intelligent systems, and turning innovative ideas into impactful digital solutions.
             </p>
 
             <p className="text-lg md:text-xl text-white mb-4 leading-relaxed">
-              I am always eager to learn new technologies and collaborate on innovative projects. I have worked on a variety of applications, from building interactive websites to developing AI models that analyze data and provide insights. My goal is to create solutions that are both practical and impactful.
+              My journey in tech started with a curiosity to understand how things work — from writing my first lines of code to developing end-to-end machine learning projects. Over time, I’ve gained experience working with modern web frameworks, deep learning architectures, and optimization techniques that bring creativity and performance together.
             </p>
+
+            <p className="text-lg md:text-xl text-white mb-4 leading-relaxed">
+              I love collaborating on challenging projects, exploring new technologies, and continuously improving my skills. Whether it’s designing smooth frontend experiences, training AI models for predictive insights, or building efficient backend systems, I aim to create solutions that are both meaningful and future-ready.
+            </p>
+
+
 
             {/* <p className="text-lg md:text-xl text-white leading-relaxed">
               Outside of coding, I enjoy exploring new ideas, reading about advancements in AI, and experimenting with personal projects. I thrive in environments that challenge me to think critically and creatively, and I’m always looking for opportunities to learn, contribute, and grow as a developer and researcher.

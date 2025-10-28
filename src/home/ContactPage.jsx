@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, User, MessageSquare } from "lucide-react";
+import { Mail, User, MessageSquare, Phone, MapPin } from "lucide-react";
 import StarsBackground from "../Stars/StarsBackground";
 import Email_icon_animation from "../assets/Email_icon_animation.gif";
 
@@ -14,48 +14,55 @@ function ContactPage() {
       <StarsBackground />
 
       <div className="mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-20 x-4 sm:px-6 lg:px-8 ">
-        {/* Left Side - Mailbox Animation */}
-        <div className="w-full md:w-1/2 flex items-center justify-center relative">
-         <img src={Email_icon_animation} alt="Email_icon_animation" className="w-40 h-40 lg:w-65 lg:h-65" />
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative text-center">
+        <img
+          src={Email_icon_animation}
+          alt="Email_icon_animation"
+          className="w-40 h-40 lg:w-65 lg:h-65"
+        />
 
-
-          {/* <div className="relative w-32 h-40">
-            
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-20 bg-gray-700 rounded"></div>
-
-            
-            <div className="absolute bottom-0 w-32 h-24 bg-blue-600 rounded-t-lg border-4 border-gray-700 shadow-md"></div>
-
-            
-            <motion.div
-              className="absolute top-6 right-2 w-2 h-10 bg-red-500 origin-bottom"
-              animate={{ rotate: [0, 45, 0] }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            />
+        {/* Contact Details Below Image */}
+        <div className="mt-4 space-y-4 text-gray-300">
+          
+          <div className="flex flex-col items-center gap-5">
+            <h3 className="text-2xl font-bold text-blue-400">
+              Get in Touch!
+            </h3>
+            <p className="text-gray-300 text-lg">
+              Feel free to drop us a line or send your brief.
+            </p>
+          </div>
+          <div className="flex flex-row items-center gap-5">
+            <MapPin className="text-blue-400" size={22} />
+            <p className="text-gray-300 text-lg">
+              Ranchi, Jharkhand, India
+            </p>
           </div>
 
-         
-          {[...Array(3)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-16 h-10 bg-white border border-gray-400 shadow-lg rounded-sm"
-              initial={{ y: -150 - i * 60, x: i * 30 - 40, rotate: -10, opacity: 0 }}
-              animate={{
-                y: [-150 - i * 60, 100, 120],
-                rotate: [-10, 5, 0],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 4,
-                delay: i * 1.2,
-                ease: "easeInOut",
-              }}
+          <div className="flex flex-row items-center gap-5">
+            <Mail className="text-blue-400" size={22} />
+            <a
+              href="mailto:yourname@example.com"
+              className="text-blue-400 hover:underline text-lg"
             >
-              
-              <div className="w-0 h-0 border-l-[32px] border-r-[32px] border-b-[20px] border-transparent border-b-gray-300 absolute -top-3 left-0"></div>
-            </motion.div>
-          ))} */}
+              abhishek1322005@gmail.com
+            </a>
+          </div>
+
+          <div className="flex flex-row items-center gap-5">
+            <Phone className="text-blue-400" size={22} />
+            <a
+              href="tel:+911234567890"
+              className="text-blue-400 hover:underline text-lg"
+            >
+              +91 99112 69594
+            </a>
+          </div>
+
+        </div>
+      
+         
+         
         </div>
 
         {/* Right Side - Contact Form */}

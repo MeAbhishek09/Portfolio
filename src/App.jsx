@@ -16,6 +16,8 @@ import ResearchInternships from "./home/ResearchInternships"
 import Avatar3D from './home/Avatar3D'
 import SkillsSection from './home/SkillsSection'
 import CertificatesAndSeminarsSection from './home/CertificatesAndSeminarsSection'
+import MyProject from './home/myproject'
+
 function App() {
   const [loading, setLoading] = useState(true)
 
@@ -26,7 +28,7 @@ function App() {
       {
       // loading ? (
       //   <LoadingPage />
-      // ) : 
+      // ) :
       (
         <div className="">   
           <Header />
@@ -34,12 +36,13 @@ function App() {
           <About/>
           <MovingText />
           <AcademicsTimeline/>
-          <Timeline/>
+          <MyProject/>
           <ResearchInternships/>
-          <Work/>
+          <Timeline/>
+          {/* <Work/> */}
           {/* <Avatar3D height={500}/> */}
           <Specilaties/>
-          <CertificatesAndSeminarsSection/>
+          {/* <CertificatesAndSeminarsSection/> */}
           <SkillsSection/>
           {/* <Technology/> */}
           <Contact />
