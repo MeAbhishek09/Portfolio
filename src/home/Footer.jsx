@@ -1,5 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import StarsBackground from "../Stars/StarsBackground";
+import { HashLink } from "react-router-hash-link";
+
 
 function Footer() {
   return (
@@ -14,10 +16,13 @@ function Footer() {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center gap-6 text-base md:text-lg font-medium">
-          <a href="#hero" className="hover:text-white transition">Home</a>
-          <a href="#about" className="hover:text-white transition">About</a>
-          <a href="#projects" className="hover:text-white transition">Projects</a>
-          <a href="#contact" className="hover:text-white transition">Contact</a>
+          {/* <a href="./" className="hover:text-white transition">Home</a> */}
+          <HashLink smooth to="/#hero" className="hover:text-white transition">Home</HashLink>
+          <HashLink smooth to="/#about" className="hover:text-white transition">About</HashLink>
+          <HashLink smooth to="/#projects" className="hover:text-white transition">Projects</HashLink>
+          <HashLink smooth to="/#contact" className="hover:text-white transition">Contact</HashLink>
+          {/* <a href="#projects" className="hover:text-white transition">Projects</a>
+          <a href="#contact" className="hover:text-white transition">Contact</a> */}
         </div>
 
         {/* Social Icons */}

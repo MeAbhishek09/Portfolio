@@ -42,7 +42,7 @@ const services = [
 export default function Specilaties() {
   return (
     <section
-      id="Specilaties"
+      id="specilaties"
       className="relative overflow-hidden px-0 sm:px-8 lg:px-12 bg-gray-100 text-white "
     >
       {/* Subtle glowing background */}
