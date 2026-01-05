@@ -14,8 +14,13 @@ import {
   TrendingUp,
   ChevronLeft,
   ChevronRight,
+  UserCheck,
 } from "lucide-react";
-
+import Attendance1 from "../assets/Attendance1.png";
+import Attendance2 from "../assets/Attendance2.png";
+import Attendance3 from "../assets/Attendance3.png";
+import Attendance4 from "../assets/Attendance4.png";
+import Attendance5 from "../assets/Attendance5.png";
 import suvidha1 from "../assets/suvidha1.png";
 import suvidha2 from "../assets/suvidha2.png";
 import suvidha3 from "../assets/suvidha3.png";
@@ -33,7 +38,30 @@ import news4 from "../assets/news4.png";
 
 
 const projects = [
-  {
+    {
+      title: "Attendance Management System",
+      brief: "AI-powered attendance system using face recognition with real-time session management.",
+      description: [
+        "This project is an intelligent attendance management system that automates student attendance using face recognition technology, eliminating manual roll calls and proxy attendance.",
+        "The system allows admins to create attendance sessions with department, semester, subject, start time, and duration. Students can join active sessions, and their faces are detected and recognized in real time using a trained face recognition model.",
+        "The backend handles secure enrollment, session expiry, and attendance storage, while the frontend provides a clean, responsive interface for admins and students. Goal: build a fast, accurate, and scalable attendance system suitable for classrooms and labs.",
+      ],
+
+      icon: <UserCheck size={36} className="text-indigo-500" />,
+      tech: ["Python", "FastAPI", "Face Recognition", "OpenCV", "MongoDB", "React","FaceNet","ArcFace",],
+      github: "https://github.com/MeAbhishek09/mark_my-_attendence",
+      demo: "https://mark-my-attendence-icj8.onrender.com/",
+      image: Attendance1,   // replace with your preview image
+      images: [
+        Attendance1,
+        Attendance2,
+        Attendance3,
+        Attendance4,
+        Attendance5,
+      ],
+    },
+
+    {
       title: "Spam Detector",
       brief: "ML-powered spam classification system integrated with a modern web interface.",
       description: [
@@ -43,7 +71,7 @@ const projects = [
       ],
 
       icon: <Code size={36} className="text-green-500" />,
-      tech: ["Python", "Scikit-learn", "Flask", "React"],
+      tech: ["Python", "Scikit-learn", "Flask", "React","Text Tokenization", "TF-IDF Vectorization"," Naive Bayes",],
       github: "https://github.com/MeAbhishek09/Spam_message_detection_app.github.io",
       demo: "/404",
       image: spam1,
@@ -217,7 +245,10 @@ export default function Projects() {
              <div className="overflow-auto max-h-[90vh]">
               {/* Close Button */}
               <button
-                onClick={() => setSelectedProject(null)}
+               onClick={() => {
+                  setSelectedProject(null);
+                  setShowFullDescription(false); // 🔥 reset description
+                }}
                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 z-20"
               >
                 <X size={28} />
