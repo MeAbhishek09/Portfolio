@@ -3,8 +3,41 @@ import { motion } from "framer-motion";
 import { Mail, User, MessageSquare, Phone, MapPin } from "lucide-react";
 import StarsBackground from "../Stars/StarsBackground";
 import Email_icon_animation from "../assets/Email_icon_animation.gif";
+import { useRef, useState  } from "react";
+import emailjs from "emailjs-com";
+
 
 function ContactPage() {
+
+  const formRef = useRef();
+  const [statusMessage, setStatusMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hc4pyh2", // "YOUR_SERVICE_ID",
+        "template_73mj9zw", // "YOUR_TEMPLATE_ID",
+        formRef.current,
+        "Eufu4assxqroCzmWF" // "YOUR_PUBLIC_KEY"
+        
+      )
+      .then(
+        () => {
+          setStatusMessage("Thank you for your message! I’ll get back to you as soon as possible.");
+          setShowPopup(true);
+          formRef.current.reset();
+        },
+        () => {
+          setStatusMessage("❌ Failed to send message. Please try again.");
+          setShowPopup(true);
+        }
+      );
+  };
+
+
   return (
     <section
       id="contact"
@@ -58,12 +91,8 @@ function ContactPage() {
               +91 99112 69594
             </a>
           </div>
-
         </div>
-      
-         
-         
-        </div>
+      </div>
 
         {/* Right Side - Contact Form */}
         <div className="w-full md:w-1/2 flex items-center justify-center">
@@ -80,12 +109,13 @@ function ContactPage() {
               Have a project in mind or just want to say hi?
             </p>
 
-            <form className="space-y-6">
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
               {/* Name Input */}
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
                   className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-700/70 border border-gray-600 focus:ring-2 focus:ring-blue-400 outline-none"
                   required
@@ -97,6 +127,7 @@ function ContactPage() {
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Your Email"
                   className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-700/70 border border-gray-600 focus:ring-2 focus:ring-blue-400 outline-none"
                   required
@@ -108,6 +139,7 @@ function ContactPage() {
                 <MessageSquare className="absolute left-3 top-4 text-gray-400" size={20} />
                 <textarea
                   rows="4"
+                  name="message"
                   placeholder="Write your message..."
                   className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-700/70 border border-gray-600 focus:ring-2 focus:ring-blue-400 outline-none resize-none"
                   required
@@ -124,6 +156,38 @@ function ContactPage() {
                 Send Message 🚀
               </motion.button>
             </form>
+
+            {/* {showPopup && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black/30 z-50">
+                <div className="relative bg-white border shadow-lg rounded-lg p-6 w-80 text-center">
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="absolute top-2 right-2 text-gray-500 hover:text-black text-lg"
+                  >
+                    ×
+                  </button>
+
+                  <p className="text-sm text-gray-800">
+                    {statusMessage}
+                  </p>
+                </div>
+              </div>
+            )} */}
+
+
+            {showPopup && (
+              <div className="fixed bottom-5 right-5 bg-white border shadow-lg rounded-lg p-4 w-80 z-50 animate-fade-in">
+                <button
+                  onClick={() => setShowPopup(false)}
+                  className="absolute top-2 right-2 text-gray-500 hover:text-black text-lg"
+                >
+                  ×
+                </button>
+                <p className="text-sm text-gray-800">{statusMessage}</p>
+              </div>
+            )}
+
+
           </motion.div>
         </div>
       </div>
