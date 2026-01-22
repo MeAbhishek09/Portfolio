@@ -23,8 +23,8 @@ const Header = () => {
 
 const dropdownLinks = [
   { name: "Gallery", href: "/gallery" },
-  { name: "Research", href: "/#research" },
-  { name: "Seminars", href: "/#seminars" },
+  // { name: "Research", href: "/#research" },
+  // { name: "Seminars", href: "/#seminars" },
 ];
 
 

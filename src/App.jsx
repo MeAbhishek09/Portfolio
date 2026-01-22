@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { Routes, Route, Navigate } from "react-router-dom";
 import './App.css'
-import LoadingPage from './home/LoadingPage'
+
 import Header from './home/header'
 import Contact from './home/ContactPage'
 import MovingText from "./home/MovingText"
@@ -13,46 +14,39 @@ import Specilaties from "./home/Specilaties"
 import Timeline from "./home/Activities"
 import AcademicsTimeline from "./home/AcademicsTimeline"
 import ResearchInternships from "./home/ResearchInternships"
-import Avatar3D from './home/Avatar3D'
 import SkillsSection from './home/SkillsSection'
-import CertificatesAndSeminarsSection from './home/CertificatesAndSeminarsSection'
 import MyProject from './home/myproject'
+import NotFoundPage from "./home/NotFoundPage";
+import Gallery from './gallery/Gallery';
 
-function App() {
-  const [loading, setLoading] = useState(true)
-
-  setTimeout(() => setLoading(false), 3000)
-
+function HomePage() {
   return (
     <>
-      {
-      // loading ? (
-      //   <LoadingPage />
-      // ) :
-      (
-        <div className="">   
-          <Header />
-          <Hero />
-          <About/>
-          <MovingText />
-          <AcademicsTimeline/>
-          <MyProject/>
-          <ResearchInternships/>
-          <Timeline/>
-          {/* <Work/> */}
-          {/* <Avatar3D height={500}/> */}
-          <Specilaties/>
-          {/* <CertificatesAndSeminarsSection/> */}
-          <SkillsSection/>
-          {/* <Technology/> */}
-          <Contact />
-          <Footer/>
-        </div>
-      )}
+      <Header />
+      <Hero />
+      <About />
+      <MovingText />
+      <AcademicsTimeline />
+      <MyProject />
+      <ResearchInternships />
+      <Timeline />
+      <Specilaties />
+      <SkillsSection />
+      <Contact />
+      <Footer />
     </>
-  )
+  );
 }
 
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/404" element={<NotFoundPage />} />
+      <Route path="*" element={<Navigate to="/404" replace />} />
+    </Routes>
+  );
+}
 
-export default App
-
+export default App;
