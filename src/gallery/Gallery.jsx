@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import suvidha1 from "../assets/suvidha1.png";
 import Footer from "@/home/Footer";
-import Header from "@/Home/Header";
+import Header from "@/home/header";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "../assets/gallery.jpg"
