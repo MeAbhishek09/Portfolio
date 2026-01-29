@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 /* 🖼️ Certificates / Seminars / Conferences */
@@ -30,11 +30,29 @@ const items = [
   },
 ];
 
+
 const Certificates = () => {
   const [selected, setSelected] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const controls = useAnimation();
 
   const duplicatedItems = [...items, ...items];
+
+  // Start infinite scroll
+  useEffect(() => {
+    startScroll();
+  }, []);
+
+  const startScroll = () => {
+    controls.start({
+      x: ["0%", "-50%"],
+      transition: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 25,
+        ease: "linear",
+      },
+    });
+  };
 
   const nextImage = () => {
     setSelected((prev) => (prev + 1) % items.length);
@@ -43,6 +61,9 @@ const Certificates = () => {
   const prevImage = () => {
     setSelected((prev) => (prev - 1 + items.length) % items.length);
   };
+
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartX = useRef(0);
 
   return (
     <section
@@ -76,59 +97,90 @@ const Certificates = () => {
 
         {/* ================= INFINITE SCROLLER ================= */}
         <div
-          className="relative overflow-hidden"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <motion.div
-            className="flex gap-10"
-            animate={{ x: isHovered ? 0 : "-50%" }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "linear",
-              duration: 25,
-            }}
-          >
-            {duplicatedItems.map((item, index) => (
-              <motion.div
-                key={index}
-                onClick={() => setSelected(index % items.length)}
-                className="min-w-[280px] sm:min-w-[320px] lg:min-w-[360px]
-                           relative overflow-hidden rounded-2xl shadow-md
-                           hover:shadow-2xl transition-all duration-500
-                           cursor-pointer group bg-white"
-              >
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700"
-                />
+      className="relative overflow-hidden cursor-grab active:cursor-grabbing"
+      onMouseEnter={() => !isDragging && controls.stop()}
+      onMouseLeave={() => !isDragging && startScroll()}
+    >
+      <motion.div
+        className="flex gap-4 sm:gap-6 lg:gap-10"
+        animate={controls}
+        drag="x"
+        dragConstraints={false}
+        dragElastic={0.1}
+        onDragStart={(e, info) => {
+          setIsDragging(true);
+          dragStartX.current = info.point.x;
+          controls.stop();
+        }}
+        onDragEnd={(e, info) => {
+          const dragDistance = Math.abs(info.point.x - dragStartX.current);
+          setIsDragging(false);
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0
-                                group-hover:opacity-100 transition-all duration-500
-                                flex flex-col items-center justify-center text-center px-4">
-                  <h3 className="text-white text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-200 text-sm">
-                    {item.organization}
-                  </p>
-                  <span className="text-xs text-blue-300 mt-1 italic">
-                    {item.category}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+          // If it was a real drag, don't trigger click
+          if (dragDistance > 5) {
+            startScroll();
+            return;
+          }
+
+          startScroll();
+        }}
+      >
+        {duplicatedItems.map((item, index) => (
+          <motion.div
+            key={index}
+            className="
+              min-w-[75vw] 
+              sm:min-w-[320px] 
+              md:min-w-[360px] 
+              lg:min-w-[380px]
+              xl:min-w-[420px]
+              relative overflow-hidden rounded-2xl shadow-md
+              hover:shadow-2xl transition-all duration-500
+              cursor-pointer group bg-white
+            "
+          >
+            <img
+              src={item.src}
+              alt={item.title}
+              className="
+                w-full 
+                h-[180px] 
+                sm:h-[220px] 
+                md:h-[240px] 
+                lg:h-[260px] 
+                xl:h-[280px]
+                object-cover transform group-hover:scale-110 transition duration-700
+              "
+            />
+
+            {/* Overlay */}
+            <div
+              className="absolute inset-0 bg-black/40 opacity-0
+                         group-hover:opacity-100 transition-all duration-500
+                         flex flex-col items-center justify-center text-center px-4"
+            >
+              <h3 className="text-white text-base sm:text-lg font-semibold">
+                {item.title}
+              </h3>
+              <p className="text-gray-200 text-xs sm:text-sm">
+                {item.organization}
+              </p>
+              <span className="text-[10px] sm:text-xs text-blue-300 mt-1 italic">
+                {item.category}
+              </span>
+            </div>
           </motion.div>
-        </div>
+        ))}
+      </motion.div>
+    </div>
+
       </div>
 
       {/* ================= MODAL VIEWER ================= */}
       <AnimatePresence>
         {selected !== null && (
           <>
+            {/* Backdrop */}
             <motion.div
               className="fixed inset-0 bg-black/70 z-40"
               initial={{ opacity: 0 }}
@@ -137,61 +189,90 @@ const Certificates = () => {
               onClick={() => setSelected(null)}
             />
 
+            {/* Modal Wrapper */}
             <motion.div
-              className="fixed z-50 top-1/2 left-1/2
-                         -translate-x-1/2 -translate-y-1/2
-                         w-[90%] max-w-4xl bg-white rounded-2xl
-                         overflow-hidden shadow-xl"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              <img
-                src={items[selected].src}
-                alt={items[selected].title}
-                className="w-full max-h-[80vh] object-contain bg-black"
-              />
+              {/* Modal Box */}
+              <motion.div
+                initial={{ scale: 0.85, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.85, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="relative w-full h-auto lg:max-w-[60vw] lg:max-h-[80vh] bg-white rounded-2xl overflow-hidden shadow-xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                
+                <div className="relative w-full bg-black overflow-hidden flex items-center justify-center">
 
-              <div className="p-6 flex justify-between items-center bg-gray-50">
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    {items[selected].title}
-                  </h3>
-                  <p className="text-gray-500 text-sm">
-                    {items[selected].organization}
-                  </p>
+                  {/* Image */}
+                  <img
+                    src={items[selected].src}
+                    alt={items[selected].title}
+                    className="w-full max-h-[60vh] object-contain"
+                  />
+
+                  {/* Left shadow */}
+                  <div className="pointer-events-none absolute left-0 top-0 h-full w-24
+                                  bg-gradient-to-r from-black/70 to-transparent" />
+
+                  {/* Right shadow */}
+                  <div className="pointer-events-none absolute right-0 top-0 h-full w-24
+                                  bg-gradient-to-l from-black/70 to-transparent" />
+
+                  {/* ❌ Close Button */}
+                  <button
+                    onClick={() => setSelected(null)}
+                    className="absolute top-4 right-4 z-10
+                              bg-black/60 text-white rounded-full p-2
+                              hover:bg-black/80 transition"
+                  >
+                    <X size={22} sm:size={16}/>
+                  </button>
+
+                  {/* ⬅ Left Arrow */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      prevImage();
+                    }}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-10
+                              text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition"
+                  >
+                    <ChevronLeft size={28} />
+                  </button>
+
+                  {/* ➡ Right Arrow */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      nextImage();
+                    }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-10
+                              text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition"
+                  >
+                    <ChevronRight size={28} />
+                  </button>
+
                 </div>
-                <button
-                  onClick={() => setSelected(null)}
-                  className="text-gray-500 hover:text-red-500"
-                >
-                  <X size={24} />
-                </button>
-              </div>
 
-              {/* Arrows */}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevImage();
-                }}
-                className="absolute left-4 top-1/2 -translate-y-1/2
-                           text-white bg-black/50 rounded-full p-2 hover:bg-black/80"
-              >
-                <ChevronLeft size={28} />
-              </button>
-
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextImage();
-                }}
-                className="absolute right-4 top-1/2 -translate-y-1/2
-                           text-white bg-black/50 rounded-full p-2 hover:bg-black/80"
-              >
-                <ChevronRight size={28} />
-              </button>
+                <div className="p-6 flex justify-between items-center bg-gray-50">
+                  <div>
+                    <h3 className="font-semibold text-lg">
+                      {items[selected].title}
+                    </h3>
+                    <p className="text-gray-500 text-sm">
+                      {items[selected].organization}
+                    </p>
+                    <p className="text-gray-500 text-sm">
+                      {items[selected].organization}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           </>
         )}

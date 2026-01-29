@@ -21,8 +21,8 @@
 
 
 import { motion } from "framer-motion";
-import myGif1 from "../assets/boy.gif";
-import myGif2 from "../assets/running_robo.gif";
+import myGif1 from "../../assets/boy.gif";
+import myGif2 from "../../assets/running_robo.gif";
 
 export default function MovingText() {
   return (

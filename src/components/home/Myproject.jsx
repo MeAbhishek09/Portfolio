@@ -16,25 +16,31 @@ import {
   ChevronRight,
   UserCheck,
 } from "lucide-react";
-import Attendance1 from "../assets/Attendance1.png";
-import Attendance2 from "../assets/Attendance2.png";
-import Attendance3 from "../assets/Attendance3.png";
-import Attendance4 from "../assets/Attendance4.png";
-import Attendance5 from "../assets/Attendance5.png";
-import suvidha1 from "../assets/suvidha1.png";
-import suvidha2 from "../assets/suvidha2.png";
-import suvidha3 from "../assets/suvidha3.png";
-import suvidha4 from "../assets/suvidha4.png";
-import suvidha5 from "../assets/suvidha5.png";
-import spam1 from "../assets/spam1.png";
-import portfolio1 from "../assets/portfolio1.png";
-import portfolio2 from "../assets/portfolio2.png";
-import portfolio3 from "../assets/portfolio3.png";
-import portfolio4 from "../assets/portfolio4.png";
-import news1 from "../assets/news1.png";
-import news2 from "../assets/news2.png";
-import news3 from "../assets/news3.png";
-import news4 from "../assets/news4.png";
+
+import Attendance1 from "../../assets/Attendance1.png";
+import Attendance2 from "../../assets/Attendance2.png";
+import Attendance3 from "../../assets/Attendance3.png";
+import Attendance4 from "../../assets/Attendance4.png";
+import Attendance5 from "../../assets/Attendance5.png";
+
+import suvidha1 from "../../assets/suvidha1.png";
+import suvidha2 from "../../assets/suvidha2.png";
+import suvidha3 from "../../assets/suvidha3.png";
+import suvidha4 from "../../assets/suvidha4.png";
+import suvidha5 from "../../assets/suvidha5.png";
+
+import spam1 from "../../assets/spam1.png";
+
+import portfolio1 from "../../assets/portfolio1.png";
+import portfolio2 from "../../assets/portfolio2.png";
+import portfolio3 from "../../assets/portfolio3.png";
+import portfolio4 from "../../assets/portfolio4.png";
+
+import news1 from "../../assets/news1.png";
+import news2 from "../../assets/news2.png";
+import news3 from "../../assets/news3.png";
+import news4 from "../../assets/news4.png";
+
 
 
 const projects = [
@@ -111,7 +117,7 @@ const projects = [
       icon: <User size={36} className="text-red-500" />,
       tech: ["React", "Vite", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/MeAbhishek09/Portfolio",
-      demo: "https://meabhishek09.github.io/Portfolio/",
+      demo: "https://abhishek-portfolio-flax.vercel.app/",
       image: portfolio1,
       images: [portfolio1,portfolio2,portfolio3,portfolio4],
     },

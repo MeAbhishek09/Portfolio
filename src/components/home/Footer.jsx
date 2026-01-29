@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import StarsBackground from "../Stars/StarsBackground";
+import StarsBackground from "../../Stars/StarsBackground";
+// import StarsBackground from "../Stars/StarsBackground";
 import { HashLink } from "react-router-hash-link";
 
 

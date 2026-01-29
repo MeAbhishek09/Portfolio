@@ -6,8 +6,9 @@ import {
   FaEnvelope,
   FaMousePointer,
 } from "react-icons/fa";
-import StarsBackground from "../Stars/StarsBackground";
-import profile from "../assets/abhishek1.png";
+import StarsBackground from "../../Stars/StarsBackground";
+// import StarsBackground from "../Stars/StarsBackground";
+import profile from "../../assets/abhishek1.png";
 
 const HeroSection = () => {
   return (

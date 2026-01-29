@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logo_hi from "../assets/Robot_Says_Hi.gif";
+import logo_hi from "../../assets/Robot_Says_Hi.gif";
 
 function About() {
   return (

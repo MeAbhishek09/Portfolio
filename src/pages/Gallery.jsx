@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import suvidha1 from "../assets/suvidha1.png";
-import Footer from "@/home/Footer";
-import Header from "@/home/header";
+import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "../assets/gallery.jpg"
@@ -9,7 +9,6 @@ import img2 from "../assets/gallery_1_kgp.jpg"
 import img3 from "../assets/gallery_2_rvs.jpg"
 import img4 from "../assets/gallery_3_nitr.jpg"
 import img5 from "../assets/gallery_4_kgp.jpg"
-import img6 from "../assets/gallery_5_kgp.jpg"
 
 const images = [
   { src: img1, 
@@ -35,21 +34,6 @@ const images = [
     title: "Creative Design",
     span: "col-span-2 row-span-1",
   },
-  {
-    src:  img6,
-    title: "AI Creations",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src:  img1,
-    title: "Code & Creativity",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: img1,
-    title: "Futuristic Vision",    
-    span: "col-span-2 row-span-2",
-  },
 ];
 
 const Gallery = () => {
@@ -67,12 +51,9 @@ const Gallery = () => {
       {/* Gallery Section */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-extrabold mb-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="p-2 text-4xl font-extrabold mb-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Gallery Highlights
           </h2>
-          <p className="text-gray-500 text-lg">
-            Click any photo to explore it in detail ✨
-          </p>
         </div>
 
         {/* Bento Grid */}
@@ -111,6 +92,14 @@ const Gallery = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
+              {/* Close Button */}
+                <button
+                  onClick={() => setSelectedIndex(null)}
+                  className="absolute top-4 right-4 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
+                >
+                  <X size={28} />
+                </button>
+
               {/* Image Container */}
               <motion.div
                 key={selectedIndex}
@@ -123,21 +112,13 @@ const Gallery = () => {
                 <img
                   src={images[selectedIndex].src}
                   alt={images[selectedIndex].title}
-                  className="h-auto w-auto rounded-2xl shadow-2xl object-contain"
+                  className="h-auto w-auto rounded-2xl shadow-2xl object-contain max-h-[99vh] "
                 />
 
                 {/* Title */}
                 <p className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-lg font-medium bg-black/50 px-4 py-2 rounded-lg">
                   {images[selectedIndex].title}
                 </p>
-
-                {/* Close Button */}
-                <button
-                  onClick={() => setSelectedIndex(null)}
-                  className="absolute top-4 right-4 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
-                >
-                  <X size={28} />
-                </button>
 
                 {/* Prev Button */}
                 <button

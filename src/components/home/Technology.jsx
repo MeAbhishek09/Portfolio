@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import StarsBackground from "../Stars/StarsBackground";
+import StarsBackground from "../../Stars/StarsBackground";
+// import StarsBackground from "../Stars/StarsBackground";
 
 const technologies = [
   { name: "React", color: "bg-blue-500" },

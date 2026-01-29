@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, User, MessageSquare, Phone, MapPin } from "lucide-react";
-import StarsBackground from "../Stars/StarsBackground";
-import Email_icon_animation from "../assets/Email_icon_animation.gif";
+import StarsBackground from "../../Stars/StarsBackground";
+// import StarsBackground from "./Stars/StarsBackground";
+import Email_icon_animation from "../../assets/Email_icon_animation.gif";
+// import Email_icon_animation from "../assets/Email_icon_animation.gif";
 import { useRef, useState  } from "react";
 import emailjs from "emailjs-com";
 
