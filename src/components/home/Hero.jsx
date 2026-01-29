@@ -72,7 +72,7 @@ const HeroSection = () => {
 
           {/* Social Icons */}
         <div className="flex justify-center md:justify-start gap-5 pt-5">
-          <a href="https://github.com/abhishek" target="_blank" rel="noreferrer">
+          <a href="https://github.com/MeAbhishek09" target="_blank" rel="noreferrer">
             <FaGithub className="text-2xl hover:text-white hover:scale-110 transition" />
           </a>
           <a
@@ -82,7 +82,7 @@ const HeroSection = () => {
           >
             <FaLinkedin className="text-2xl hover:text-linkedin hover:scale-110 transition" />
           </a>
-          <a href="mailto:abhishek@example.com">
+          <a href="mailto:abhishek1322005@gmail.com">
             <FaEnvelope className="text-2xl hover:text-red-400 hover:scale-110 transition" />
           </a>
         </div>
