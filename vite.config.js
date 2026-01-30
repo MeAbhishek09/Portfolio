@@ -1,30 +1,32 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+// import path from 'node:path'
+// import { fileURLToPath } from 'node:url'
 
-export default defineConfig({
-  plugins: [react()],
-  base: '/Portfolio/',   // GitHub repo name
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-})
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 
-
-
-// // https://vite.dev/config/
-// export default defineConfig(({ mode }) => ({
+// export default defineConfig({
 //   plugins: [react()],
-//   base: mode === 'github' ? '/Portfolio/' : '/',
+//   base: '/Portfolio/',   // GitHub repo name
 //   resolve: {
 //     alias: {
 //       '@': path.resolve(__dirname, './src'),
 //     },
 //   },
-// }))
+// })
+
+
+
+import path from 'path'
+
+export default defineConfig(({ mode }) => ({
+  plugins: [react()],
+  base: '/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+}))
