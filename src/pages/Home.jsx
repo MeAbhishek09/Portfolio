@@ -3,7 +3,7 @@ import Hero from "../components/home/Hero";
 import MovingText from "../components/home/MovingText";
 import About from "../components/home/About";
 import SkillsSection from "../components/home/SkillsSection";
-import MyProject from "../components/home/MyProject";
+import MyProject from "../components/home/Myproject";
 import ResearchInternships from "../components/home/ResearchInternships";
 import AcademicsTimeline from "../components/home/AcademicsTimeline";
 import Timeline from "../components/home/Activities";
